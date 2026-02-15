@@ -16,13 +16,9 @@ export const getUser = async (req, res, next) => {
   try {
     const user = await User.findById(req.params.id).select("-password");
     res.status(200).json({
-      success: false,
+      success: true,
       data: user,
     });
-    const ob = {
-      name: "muhamad",
-      name: "hello",
-    };
   } catch (error) {
     next(error);
   }
