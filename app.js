@@ -15,6 +15,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 //routes
+app.get("/", (res) => {
+  res.statusCode(200).json({
+    success: true,
+    message: "Server is Running",
+  });
+});
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/subscriptions", subRouter);
