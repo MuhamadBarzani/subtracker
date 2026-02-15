@@ -16,7 +16,7 @@ app.use(cookieParser());
 
 //routes
 app.get("/", (res) => {
-  res.statusCode(200).json({
+  res.status(200).json({
     success: true,
     message: "Server is Running",
   });
