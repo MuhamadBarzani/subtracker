@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 //routes
-app.get("/", (res) => {
+app.get("/", (req, res) => {
   res.status(200).json({
     success: true,
     message: "Server is Running",
